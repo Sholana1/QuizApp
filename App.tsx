@@ -1,20 +1,18 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import QuizScreen from './src/app/QuizScreen';
+import QuizProvider from './src/providers/QuizProvider';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Hello</Text>
+    <QuizProvider>
+      <QuizScreen />  
       <StatusBar style="auto" />
-    </View>
+    </QuizProvider>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+// const styles = StyleSheet.create({
+//   container: {
+//     flex: 1
+//   },
+// });
